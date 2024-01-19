@@ -6,15 +6,19 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'titillium-web': ['Titillium Web', 'sans-serif'],
+      },
       colors: {
         white: '#F9F9F9',
         text: '#00000029',
-        brownishRed: '#5C1F06',
-        lightRed: '#D97852', 
+        primary: '#5C1F06',
+        orange: '#D97852', 
         lightBrown: '#D1B3A7',
         darkGray: '#524641',
         mediumGray: '#CCCCCC',
         black: '#000000',
+        
       },
     },
   },
