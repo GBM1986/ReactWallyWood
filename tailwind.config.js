@@ -14,7 +14,7 @@ export default {
         text: '#00000029',
         primary: '#5C1F06',
         orange: '#D97852', 
-        lightBrown: '#D1B3A7',
+        lightbrown: '#D1B3A7',
         darkGray: '#524641',
         mediumGray: '#CCCCCC',
         black: '#000000',
