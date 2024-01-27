@@ -8,7 +8,7 @@ import { CiMenuBurger } from "react-icons/ci";
 
   const content = (
     <div className="absolute left-0 right-0 block w-full bg-white transition lg:hidden top-[90px] z-20">
-      <ul className="p-20 text-xl text-end">
+      <ul className="p-20 text-xl text-end max-sm:text-base">
         <Link to="/">
           <li className="py-4 my-4 text-center border-b cursor-pointer text-darkGray border-primary hover:border-primary hover:text-orange">HOME</li>
         </Link>
@@ -32,7 +32,7 @@ import { CiMenuBurger } from "react-icons/ci";
     <nav className="bg-white max-w-[1000px] m-auto pb-2">
       <div className="z-50 flex justify-end items-center flex-1 ml-auto h-10vh lg: border-b-2 bg-white border-orange max-w-[1400px] m-auto grid grid-cols-2 grid-rows-2 gap-4">
         <div className="flex items-center row-span-2">
-          <h2 className="text-[54px] font-black text-orange font-titillium-web whitespace-pre">WALLYWOOD</h2>
+        <h2 className="text-[5vw] lg:text-[54px] font-black text-orange font-titillium-web whitespace-pre">WALLYWOOD</h2>
         </div>
         <div className="ml-auto">
               {/* Shopping basket SVG */}

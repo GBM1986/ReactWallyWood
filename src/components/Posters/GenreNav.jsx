@@ -22,7 +22,7 @@ export const GenreNav = () => {
         <ul>
         {apiData && apiData.map(item => {
             return (
-                <li className=" pr-16 text-orange hover:text-primary transition duration-300 before:content-['&raquo;']" key={item.id}><NavLink to={item.slug}>{item.title}</NavLink></li>
+                <li className="max-sm:pr-6 pr-16 text-orange hover:text-primary transition duration-300 before:content-['&raquo;']" key={item.id}><NavLink to={item.slug}>{item.title}</NavLink></li>
             )
         })} 
         </ul>

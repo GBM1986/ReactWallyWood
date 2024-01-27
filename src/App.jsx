@@ -5,6 +5,8 @@ import { Posters } from './pages/Posters/Posters.jsx';
 import { PosterDetails } from './components/Posters/PosterDetails.jsx';
 import { PosterList } from './components/Posters/Posterlist.jsx';
 import { Omos } from './pages/Omos/Omos.jsx';
+import Kontakt from './pages/Kontakt/Kontakt.jsx';
+import Login from './pages/Login/Login.jsx'
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path=":genre/:poster" element={<PosterDetails />} />
         </Route>
         <Route path="/omos" element={<Omos />} />
+        <Route path="/kontakt" element={<Kontakt />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );

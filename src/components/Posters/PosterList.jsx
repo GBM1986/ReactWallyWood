@@ -21,9 +21,9 @@ export const PosterList = () => {
      
 
     return (
-        <div className="grid grid-cols-3 gap-4 bg-white mt-20 border-l-2 border-lightbrown mb-4">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 max-sm:grid-cols-1 gap-4  bg-white mt-20 border-l-2 border-lightbrown mb-4">
           {apiData && apiData.map(item => (
-            <div key={item.id} className="ml-8 py-2 flex flex-col items-center">
+            <div key={item.id} className="ml-8 py-2 flex flex-col items-center ">
               <NavLink to={item.slug}>
                 <img className="mb-4" src={item.image} alt="" />
                 <div className="flex flex-col items-center">
