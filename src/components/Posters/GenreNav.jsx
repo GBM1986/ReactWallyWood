@@ -26,6 +26,7 @@ export const GenreNav = () => {
             )
         })} 
         </ul>
+        
       </nav>
   )
 }

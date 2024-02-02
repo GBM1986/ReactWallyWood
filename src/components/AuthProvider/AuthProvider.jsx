@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect, useContext } from "react";
+import React, { createContext, useState, useContext } from "react";
 
 // Create a context for managing authentication state
 const AuthContext = createContext();
@@ -29,14 +29,6 @@ export const AuthProvider = ({ children }) => {
     sessionStorage.removeItem("token");
     setLoginData(null);
   };
-
-  // Effect to initialize login data from session storage
-  useEffect(() => {
-    const storedData = sessionStorage.getItem("token");
-    if (storedData) {
-      setLoginData(JSON.parse(storedData));
-    }
-  }, []);
 
   // Make the authentication functions and data available to child components
   return (

@@ -7,7 +7,7 @@ import { CiMenuBurger } from "react-icons/ci";
   const [click, setClick] = useState(false);
 
   const content = (
-    <div className="absolute left-0 right-0 block w-full bg-white transition lg:hidden top-[90px] z-20">
+    <div className="absolute left-0 right-0 block w-full bg-white transition lg:hidden md:top-[60px] sm:top-[50px] z-20">
       <ul className="p-20 text-xl text-end max-sm:text-base">
         <Link to="/">
           <li className="py-4 my-4 text-center border-b cursor-pointer text-darkGray border-primary hover:border-primary hover:text-orange">HOME</li>

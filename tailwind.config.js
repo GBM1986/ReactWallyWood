@@ -18,8 +18,13 @@ export default {
         darkGray: '#524641',
         mediumGray: '#CCCCCC',
         black: '#000000',
-        
       },
+       screens: {
+      'sm': '500px',
+      'md': '880px', // Adjusted medium breakpoint to 880px
+      'lg': '1100px',
+      'xl': '1400px',
+    }
     },
   },
   plugins: [],
