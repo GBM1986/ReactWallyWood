@@ -1,5 +1,6 @@
+import React from 'react';
 import axios from "axios";
-import { useAuth } from "../../components/LoginAuthProvider/LoginAuthProvider";
+import { useAuth } from "../../components/AuthProvider/AuthProvider";
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 
@@ -20,16 +21,19 @@ const Login = () => {
   };
 
   const handleSessionData = (data) => {
-    if (data) {
-      sessionStorage.setItem("token", JSON.stringify(data));
-      setLoginData(data);
+    if (data && data.user) {
+      sessionStorage.setItem("access_token", JSON.stringify(data));
+      setLoginData(data.user); // Set loginData to user object
     }
   };
+  
 
   const Logout = () => {
-    sessionStorage.removeItem('token');
-    setLoginData(''); 
+    sessionStorage.removeItem('access_token');
+    setLoginData(null); // Update to null as the user is logged out
   };
+
+  console.log(loginData)
 
   return (
     <div className="max-w-[1200px] mx-auto">   

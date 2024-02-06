@@ -1,44 +1,27 @@
-import React, { createContext, useState, useContext } from "react";
 
-// Create a context for managing authentication state
-const AuthContext = createContext();
+import { createContext, useContext, useEffect, useState } from "react";
 
-// Create the AuthProvider component
-export const AuthProvider = ({ children }) => {
-  // State to store authentication data
-  const [loginData, setLoginData] = useState(null);
 
-  // Function to check if the user is authenticated
-  const isAuthenticated = () => {
-    return !!loginData;
-  };
+const AuthContext = createContext()
 
-  // Function to get the authentication data
-  const getLoginData = () => {
-    return loginData;
-  };
 
-  // Function to set the authentication data
-  const login = (data) => {
-    sessionStorage.setItem("token", JSON.stringify(data));
-    setLoginData(data);
-  };
+export const AuthProvider = ({children}) => {
 
-  // Function to clear authentication data (logout)
-  const logout = () => {
-    sessionStorage.removeItem("token");
-    setLoginData(null);
-  };
+	const [ loginData, setLoginData ] = useState({})
 
-  // Make the authentication functions and data available to child components
-  return (
-    <AuthContext.Provider
-      value={{ isAuthenticated, getLoginData, login, logout }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
-};
+	
+    useEffect (() => {
+        if(sessionStorage.getItem('access_token')) {
+            setLoginData(JSON.parse(sessionStorage.getItem('access_token')))
+        }
+    },[children])
+	
+	return (
+		<AuthContext.Provider value={{loginData, setLoginData}}>
+			{children}
+		</AuthContext.Provider>
+	);
+}
 
-// Custom hook to use authentication context in child components
-export const useAuth = () => useContext(AuthContext);
+
+export const useAuth =  () => useContext(AuthContext)
